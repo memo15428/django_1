@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from django.views.generic import (
     TemplateView,
+    ListView,
 )
 
 class IndexView(TemplateView):
@@ -9,5 +10,9 @@ class IndexView(TemplateView):
     #Un template es un archivo HTML
     template_name = "home/index.html"
     
+class ListaLibros(ListView):
+    template_name = "home/lista.html"
+    queryset = {"El quijote de la mancha", "Codigo limpio", "La sombra del viento", "Django 2.0"}
+    context_object_name = "libros"
 
 # Create your views here.
