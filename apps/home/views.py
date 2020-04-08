@@ -5,6 +5,9 @@ from django.views.generic import (
 )
 
 class IndexView(TemplateView):
-    print("---------------------prueba de URL-------------------------")
+    #una vista procesa los datos y renderiza el resultado en pantalla, siempre nos pedirá un template para trabajar
+    #Un template es un archivo HTML
+    template_name = "home/index.html"
+    
 
 # Create your views here.
